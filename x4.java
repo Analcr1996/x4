@@ -6,7 +6,7 @@ int counter=0;
 
 //// SETUP:  size only.  Also set colors.
 void setup() {
-  size( 640, 480 );
+  size( 540, 480 );
   reset();
 }
 void reset() {
@@ -25,8 +25,30 @@ void draw() {
 }
 // Draw the button.
 void showButton( float x, float y, float w, float h ) {
-  fill( 255,255,0 );
-  rect ( x,y, w,h );
+  fill( 255, 183, 183 );
+  ellipse(275, 228, 75, 75);
+  
+  //eye white
+  fill(255);
+  ellipse( 260, 135, 13, 13);
+  //eye black
+  fill(0);
+  ellipse( 260, 135, 6, 6);
+  //eye white
+  fill(255);
+  ellipse( 288, 135, 13, 13);
+  //eye black
+  fill(0);
+  ellipse( 288, 135, 6, 6);
+  //mouth
+  fill(255);
+  rect( 263, 147, 20, 10);
+  //hat
+  fill(0);
+  ellipse(200,300,85,10);
+  fill(0);
+  rect(178, 264, 41,41);
+  
 }
 
 //// HANDLERS:  keys & click
@@ -35,13 +57,29 @@ void keyPressed() {
   if (key == 'r') reset();
 }
 void mousePressed() {
-  if ( hit( mouseX,mouseY, 100,100, 50,50 ) ) {
+  if ( hit( mouseX,mouseY, 275, 144, 75, 75 ) ) {
     counter=  counter+1;
-    if (counter % 2 > 0) {
+    int k = counter % 5;
+    if(k == 1) {
       r=  255;
-      g=  50;
-      b=  0;
-    } else {
+      g=  46;
+      b=  46;
+    } else if (k == 2) {
+      r= 251;
+      g= 46;
+      b= 255;
+    } else if (k == 2) {
+      r= 251;
+      g= 46;
+      b= 255;
+    } else if ( k == 3) {
+      r= 81;
+      g= 44;
+      b= 255;
+    } else if ( k == 4) {
+      r= 44;
+      g= 255;
+      b= 236;
       reset();
     }
   }
