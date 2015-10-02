@@ -30,24 +30,24 @@ void showButton( float x, float y, float w, float h ) {
   
   //eye white
   fill(255);
-  ellipse( 260, 135, 13, 13);
+  ellipse( 260, 220, 13, 13);
   //eye black
   fill(0);
-  ellipse( 260, 135, 6, 6);
+  ellipse( 260, 220, 6, 6);
   //eye white
   fill(255);
-  ellipse( 288, 135, 13, 13);
+  ellipse( 288, 220, 13, 13);
   //eye black
   fill(0);
-  ellipse( 288, 135, 6, 6);
+  ellipse( 288, 220, 6, 6);
   //mouth
   fill(255);
-  rect( 263, 147, 20, 10);
+  rect( 264, 237, 20, 10);
   //hat
   fill(0);
-  ellipse(200,300,85,10);
+  ellipse(275,203,86,11);
   fill(0);
-  rect(178, 264, 41,41);
+  rect(252, 162, 45,42);
   
 }
 
@@ -57,7 +57,7 @@ void keyPressed() {
   if (key == 'r') reset();
 }
 void mousePressed() {
-  if ( hit( mouseX,mouseY, 275, 144, 75, 75 ) ) {
+  if ( hit( mouseX,mouseY, 275, 228, 75, 75 ) ) {
     counter=  counter+1;
     int k = counter % 5;
     if(k == 1) {
